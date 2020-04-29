@@ -1,0 +1,14 @@
+name: markdown
+parent: default
+
+matches:
+  - trigger: ":link"
+    replace: "[$|$]({{clipboard}})"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
+  - trigger: ":img"
+    replace: "![$|$]({{clipboard}})"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
